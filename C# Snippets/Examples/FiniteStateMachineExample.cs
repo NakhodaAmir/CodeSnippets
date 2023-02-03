@@ -8,7 +8,7 @@ public class Example
     }
 }
 
-public class ExampleState : FiniteStateMachineState
+public class ExampleState : State
 {
     public ExampleState(FiniteStateMachine fsm) : base(fsm) { }
 
