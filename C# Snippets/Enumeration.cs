@@ -1,4 +1,4 @@
-abstract public class Enumeration : System.IComparable
+abstract public class Enumeration : IComparable
         {
             #region Properties
             public int Id { get; private set; }
