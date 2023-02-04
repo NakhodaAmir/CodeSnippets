@@ -1,4 +1,4 @@
- public static void Sort3(float x, float y, float z, out float min, out float mid, out float max)
+public static void Sort3(float x, float y, float z, out float min, out float mid, out float max)
 {
     if (x > y)
     {
