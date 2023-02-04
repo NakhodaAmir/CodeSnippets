@@ -1,7 +1,7 @@
 public class FiniteStateMachine
 {
     #region Variables
-    protected System.Collections.Generic.Dictionary<int, FiniteStateMachineState> states;
+    protected Dictionary<int, FiniteStateMachineState> states;
     protected FiniteStateMachineState currentState;
     protected FiniteStateMachineState previousState;
     #endregion
@@ -9,7 +9,7 @@ public class FiniteStateMachine
     #region Constructor
     public FiniteStateMachine()
     {
-        states = new System.Collections.Generic.Dictionary<int, FiniteStateMachineState>();
+        states = new Dictionary<int, FiniteStateMachineState>();
         currentState = null;
         previousState = null;
     }
