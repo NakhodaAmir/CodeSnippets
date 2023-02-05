@@ -1,32 +1,32 @@
 public class FiniteStateMachine
 {
     #region Variables
-    protected Dictionary<int, FiniteStateMachineState> states;
-    protected FiniteStateMachineState currentState;
-    protected FiniteStateMachineState previousState;
+    protected Dictionary<int, State> states;
+    protected State currentState;
+    protected State previousState;
     #endregion
 
     #region Constructor
     public FiniteStateMachine()
     {
-        states = new Dictionary<int, FiniteStateMachineState>();
+        states = new Dictionary<int, State>();
         currentState = null;
         previousState = null;
     }
     #endregion
 
     #region Public Methods
-    public void Add(int key, FiniteStateMachineState state)
+    public void Add(int key, State state)
     {
         states.Add(key, state);
     }
 
-    public FiniteStateMachineState GetState(int key)
+    public State GetState(int key)
     {
         return states[key];
     }
 
-    public FiniteStateMachineState GetPreviousState()
+    public State GetPreviousState()
     {
         return previousState;
     }
@@ -36,7 +36,7 @@ public class FiniteStateMachine
         SetCurrentState(GetState(key));
     }
 
-    public void SetCurrentState(FiniteStateMachineState state)
+    public void SetCurrentState(State state)
     {
         if (currentState != null) currentState.Exit();
 
